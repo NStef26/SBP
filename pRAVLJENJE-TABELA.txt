@@ -1,0 +1,194 @@
+CREATE TABLE Rezultati_izbora(
+ID_rezultata_izbora         NUMBER(15) PRIMARY KEY,
+Procenat_glasalih_za_kandidata         NUMBER(3,2),
+Broj_biraca_izaslih         NUMBER(5)
+);
+
+CREATE TABLE Aktivista(
+ID_aktiviste          NUMBER(15) PRIMARY KEY,
+Ime                   VARCHAR2(15) NOT NULL,
+Ime_roditelja         VARCHAR2(15) NOT NULL,
+Prezime               VARCHAR2(15) NOT NULL,
+Datum_rodjenja        DATE NOT NULL,
+Adresa                VARCHAR2(30) NOT NULL,
+ID_koordinatora       NUMBER(15) REFERENCES Koordinator(ID_aktiviste),
+ID_glasackog_mesta    NUMBER(15) REFERENCES Glasacko_mesto(ID_glasackog_mesta),
+Primedba              VARCHAR2(50)
+);
+
+
+
+CREATE TABLE Koordinator(
+ID_aktiviste          NUMBER(15) PRIMARY KEY,
+Ime_opstine           VARCHAR2(15) NOT NULL,
+Adresa_kancelarije    VARCHAR2(30) NOT NULL
+);
+
+
+ALTER TABLE Koordinator ADD CONSTRAINT ID_aktiviste_FK FOREIGN KEY(ID_aktiviste) REFERENCES Aktivista(ID_aktiviste);
+
+CREATE TABLE Reklamni_prostor(
+ID_reklamnog_prostora         NUMBER(15) PRIMARY KEY,
+Iznos         NUMBER(15),
+Datum_od         DATE,
+Datum_do         DATE
+);
+
+
+CREATE TABLE Panoi(
+ID_reklamnog_prostora         NUMBER(15) PRIMARY KEY,
+Naziv_ulice         VARCHAR2(15) NOT NULL,
+Grad_pano         VARCHAR2(15) NOT NULL,
+Povrsina         NUMBER(15) NOT NULL,
+Agencija_vlasnik         VARCHAR2(25) NOT NULL
+);
+
+ALTER TABLE Panoi ADD CONSTRAINT ID_reklamnog_prostora_FK FOREIGN KEY(ID_reklamnog_prostora) REFERENCES Reklamni_prostor(ID_reklamnog_prostora);
+
+CREATE TABLE Clanak(
+ID_reklamnog_prostora         NUMBER(15) PRIMARY KEY,
+Boja         VARCHAR2(15) NOT NULL,20:40 16.04.2018.
+Naziv_lista         VARCHAR2(20) NOT NULL
+);
+
+ALTER TABLE Clanak ADD CONSTRAINT ID_reklamnog_prostora_FK1 FOREIGN KEY(ID_reklamnog_prostora) REFERENCES Reklamni_prostor(ID_reklamnog_prostora);
+
+CREATE TABLE Reklama(
+ID_reklamnog_prostora         NUMBER(15) PRIMARY KEY,
+Trajanje         NUMBER(15) NOT NULL,
+Br_emitovanja         NUMBER(15) NOT NULL,
+Naziv_televizije         VARCHAR2(15) NOT NULL
+);
+
+ALTER TABLE Reklama ADD CONSTRAINT ID_reklamnog_prostora_FK2 FOREIGN KEY(ID_reklamnog_prostora) REFERENCES Reklamni_prostor(ID_reklamnog_prostora);
+
+CREATE TABLE Akcija(
+ID_akcije         NUMBER(15) PRIMARY KEY,
+Naziv         VARCHAR2(30)
+);
+
+CREATE TABLE Deljenje_letaka(
+ID_akcije         NUMBER(15) PRIMARY KEY,
+Grad_deljenje         VARCHAR2(15) NOT NULL,
+Nazivi_lokacija         VARCHAR2(15) NOT NULL
+);
+
+ALTER TABLE Deljenje_letaka ADD CONSTRAINT ID_akcije_FK FOREIGN KEY(ID_akcije) REFERENCES Akcija(ID_akcije);
+
+CREATE TABLE Susreti(
+ID_akcije         NUMBER(15) PRIMARY KEY,
+Grad_susret         VARCHAR2(15) NOT NULL,
+Vreme_trajanja         NUMBER(15) NOT NULL,
+Lokacija_susreta         VARCHAR2(15) NOT NULL
+
+);
+
+ALTER TABLE Susreti ADD CONSTRAINT ID_akcije_FK1 FOREIGN KEY(ID_akcije) REFERENCES Akcija(ID_akcije);
+
+
+CREATE TABLE Miting(
+ID_akcije         NUMBER(15)  PRIMARY KEY,
+Lokacija_mitinga         NUMBER(15) NOT NULL,
+Mesto         varchar(15) NOT NULL,
+ID_gosta3         NUMBER(15)
+);
+
+ALTER TABLE Miting ADD CONSTRAINT ID_akcije_FK2 FOREIGN KEY(ID_akcije) REFERENCES Akcija(ID_akcije);
+
+ALTER TABLE Miting ADD CONSTRAINT ID_gosta3_FK FOREIGN KEY(ID_gosta3) REFERENCES Gost(ID_gosta);
+
+CREATE TABLE Zatvoreni_prostor(
+ID_akcije         NUMBER(15) PRIMARY KEY,
+Vlasnik_prostora         VARCHAR2(15) NOT NULL,
+Cena_iznajmljivanja         VARCHAR2(15) NOT NULL
+);
+
+ALTER TABLE Zatvoreni_prostor ADD CONSTRAINT ID_akcije_FK3 FOREIGN KEY(ID_akcije) REFERENCES Miting(ID_akcije);
+
+CREATE TABLE Pojavljivanje(
+ID_pojavljivanja         NUMBER(15) PRIMARY KEY
+);
+
+CREATE TABLE Gost(
+ID_gosta         NUMBER(15) PRIMARY KEY,
+Ime_gosta         varchar(15) NOT NULL,
+Prezime_gosta         varchar(15) NOT NULL,
+Funkcija         varchar(15),
+);
+
+CREATE TABLE Intervju(
+ID_pojavljivanja        NUMBER(15) PRIMARY KEY,
+Datum_intervjua         DATE,
+Datum_objavljivanja     DATE,
+Naziv_lista         VARCHAR2(15) NOT NULL
+);
+
+ALTER TABLE Intervju ADD CONSTRAINT ID_pojavljivanja_FK FOREIGN KEY(ID_pojavljivanja) REFERENCES Pojavljivanje(ID_pojavljivanja);
+
+CREATE TABLE Gostovanje(
+ID_pojavljivanja      NUMBER(15) PRIMARY KEY,
+Gledanost         NUMBER(15),
+Naziv_emisije         VARCHAR2(15) NOT NULL,
+Ime_voditelja         VARCHAR2(15) NOT NULL
+);
+
+
+ALTER TABLE Gostovanje ADD CONSTRAINT ID_pojavljivanja_FK1 FOREIGN KEY(ID_pojavljivanja) REFERENCES Pojavljivanje(ID_pojavljivanja);
+
+CREATE TABLE TV_duel(
+ID_pojavljivanja         NUMBER(15) PRIMARY KEY,
+Naziv_stanice         VARCHAR2(15)
+);
+
+ALTER TABLE TV_duel ADD CONSTRAINT ID_pojavljivanja_FK2 FOREIGN KEY(ID_pojavljivanja) REFERENCES Gostovanje(ID_pojavljivanja);
+
+CREATE TABLE Glasacko_mesto(
+ID_glasackog_mesta           NUMBER(15) PRIMARY KEY,
+Broj_glasackog_mesta         NUMBER(15) NOT NULL,
+Naziv_izborne_jedinice       VARCHAR2(15) NOT NULL,
+Ukupno_biraca                NUMBER(15) NOT NULL,
+Rezultati_na_glasackom_mestu          NUMBER(15),
+Izborni_krug         VARCHAR2(15)
+);
+
+ALTER TABLE Glasacko_mesto ADD CONSTRAINT Rezultati_FK FOREIGN KEY(Rezultati_na_glasackom_mestu) REFERENCES Rezultati_izbora(ID_rezultata_izbora);
+
+CREATE TABLE Telefon(
+ID_aktiviste         NUMBER(15),
+Telefon         NUMBER(15)
+);
+
+ALTER TABLE Telefon ADD PRIMARY KEY(Telefon , ID_aktiviste);
+
+CREATE TABLE E_mail(
+ID_aktiviste         NUMBER(15),
+E_mail         VARCHAR2(25)
+);
+
+ALTER TABLE E_mail ADD PRIMARY KEY(E_mail , ID_aktiviste);
+
+CREATE TABLE Ime_novinara(
+ID_pojavljivanja         NUMBER(15),
+Ime_novinara         VARCHAR2(15)
+);
+
+ALTER TABLE Ime_novinara ADD PRIMARY KEY(Ime_novinara , ID_pojavljivanja);
+
+CREATE TABLE Ime_protivkandidata(
+ID_pojavljivanja         NUMBER(15),
+Ime_protivkandidata         VARCHAR2(30)
+);
+
+ALTER TABLE Ime_protivkandidata ADD PRIMARY KEY(Ime_protivkandidata , ID_pojavljivanja);
+
+ALTER TABLE Ime_protivkandidata ADD CONSTRAINT ID_Duela_FK FOREIGN KEY (ID_pojavljivanja) REFERENCES TV_duel(ID_tv_duela);
+
+CREATE TABLE Pitanje(
+ID_pojavljivanja         NUMBER(15),
+Pitanje         VARCHAR2(40)
+);
+
+ALTER TABLE Pitanje ADD PRIMARY KEY(Pitanje , ID_pojavljivanja);
+
+---------
+

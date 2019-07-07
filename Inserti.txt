@@ -1,0 +1,193 @@
+INSERT INTO Aktivista (ID_aktiviste, Ime, Ime_roditelja, Prezime, Datum_rodjenja, Adresa, ID_koordinatora, ID_glasackog_mesta, Primedba)
+VALUES (1, 'Ivan', 'Marko', 'Ivanovic', '1997-06-05', 'Jeronimova 27', 3, 1, NULL);
+
+INSERT INTO Aktivista (ID_aktiviste, Ime, Ime_roditelja,Prezime, Datum_rodjenja, Adresa, ID_koordinatora, ID_glasackog_mesta, Primedba)
+VALUES (2, 'Ivana', 'Marko', 'Ivanovic', '1995-04-03', 'Jeronimova 27', 3, 1, NULL);
+
+INSERT INTO Aktivista (ID_aktiviste, Ime, Ime_roditelja, Prezime,  Datum_rodjenja, Adresa, ID_koordinatora, ID_glasackog_mesta, Primedba)
+VALUES (3, 'Darko', 'Marko', 'Ivanovic', '1990-08-05', 'Jeronimova 27', 3, 1, NULL);
+
+
+INSERT INTO Koordinator (ID_aktiviste, Ime_opstine, Adresa_kancelarije)
+VALUES (3, 'Palilula', 'Sarajevska 17');
+
+
+INSERT INTO Reklamni_prostor(ID_reklamnog_prostora, Iznos, Datum_od, Datum_do)
+VALUES (1, 15000, '2018-04-03', '2018-04-30');
+
+INSERT INTO Reklamni_prostor(ID_reklamnog_prostora, Iznos, Datum_od, Datum_do)
+VALUES (2, 30000, '2018-04-03', '2018-05-30');
+
+INSERT INTO Reklamni_prostor(ID_reklamnog_prostora, Iznos, Datum_od, Datum_do)
+VALUES (3, 17000, '2018-04-03', '2018-07-30');
+
+INSERT INTO Panoi(ID_reklamnog_prostora, Naziv_ulice, Grad_pano, Povrsina, Agencija_vlasnik)
+VALUES (1, 'Sarajevska 15', 'Nis', 23, 'Panoi Lux');
+
+INSERT INTO Clanak(ID_reklamnog_prostora, Boja, Naziv_lista)
+VALUES (2, 'Kolor', 'Nedeljnik');
+
+INSERT INTO Reklama(ID_reklamnog_prostora, Trajanje, Br_emitovanja, Naziv_televizije)
+VALUES (3, 7, 100, 'RTS');
+
+INSERT INTO Akcija(ID_akcije, Naziv)
+VALUES (1, 'Deljenje letaka');
+
+INSERT INTO Akcija(ID_akcije, Naziv)
+VALUES (2, 'Susreti');
+
+INSERT INTO Akcija(ID_akcije, Naziv)
+VALUES (3, 'Miting');
+
+INSERT INTO Akcija(ID_akcije, Naziv)
+VALUES (4, 'Zatvoreni prostor');
+
+INSERT INTO Deljenje_letaka(ID_akcije, Grad_deljenje)
+VALUES (2, 'Nis');
+
+INSERT INTO Gost(ID_gosta, Ime_gosta, Prezime_gosta, Funkcija)
+VALUES (1, 'Pera', 'Mitic', 'Direktor');
+
+INSERT INTO Miting(ID_akcije, Lokacija_mitinga, Mesto, ID_Gosta3)
+VALUES (3, 'Nis', 'Medijana', 1);
+
+
+INSERT INTO Pojavljivanje(ID_pojavljivanja)
+VALUES (1);
+
+INSERT INTO Pojavljivanje(ID_pojavljivanja)
+VALUES (2);
+
+INSERT INTO Pojavljivanje(ID_pojavljivanja)
+VALUES (3);
+
+INSERT INTO Intervju(ID_pojavljivanja, Datum_intervjua, Datum_objavljivanja, Naziv_lista)
+VALUES(1, '11-OCT-18', '12-OCT-18', 'NIN');
+
+INSERT INTO Gostovanje(ID_pojavljivanja, Gledanost, Naziv_emisije, Ime_voditelja)
+VALUES (2, 1000000, 'Duel', 'Zaklina');
+
+INSERT INTO TV_duel(ID_pojavljivanja, Naziv_stanice)
+VALUES (3, "RTS");
+
+INSERT INTO Glasacko_mesto(ID_glasackog_mesta, Broj_glasackog_mesta, Naziv_izborne_jedinice, Ukupno_biraca, Rezultati_na_glasackom_mestu, Izborni_krug)
+VALUES (1, 12, 'Palilula 4', 1000, 503, 'Drugi krug');
+
+INSERT INTO Telefon(ID_aktiviste, Telefon)
+VALUES(1, '063111111');
+
+INSERT INTO Telefon(ID_aktiviste, Telefon)
+VALUES(2, '063222222');
+
+INSERT INTO E_mail(ID_aktiviste, E_mail)
+VALUES (1, 'nesta@gmail.com');
+
+INSERT INTO E_mail(ID_aktiviste, E_mail)
+VALUES (2, 'nestodrugo@gmail.com');
+
+INSERT INTO Ime_novinara(ID_pojavljivanja, Ime_novinara)
+VALUES (2, 'Zaklina');
+
+
+INSERT INTO Pitanje(ID_pojavljivanja, Pitanje)
+VALUES (3, 'Problem pasa lutalica');
+
+-----------
+
+INSERT INTO Akcija(ID_akcije, Naziv)
+VALUES (4, 'Deljenje letaka');
+
+INSERT INTO Akcija(ID_akcije, Naziv)
+VALUES (5, 'Susreti sa penzionerima');
+
+INSERT INTO Akcija(ID_akcije, Naziv)
+VALUES (6, 'Zavrsni miting');
+
+
+INSERT INTO Aktivista (ID_aktiviste, Ime, Ime_roditelja, Prezime,  Datum_rodjenja, Adresa, ID_koordinatora, ID_glasackog_mesta, Primedba)
+VALUES (4, 'Zarko', 'Stefan', 'Petrovic', '18.04.1992', 'Jeronimova 35', 3, 1, 'Druga stranka vodila dodatan biracki spisak');
+
+INSERT INTO Aktivista (ID_aktiviste, Ime, Ime_roditelja, Prezime,  Datum_rodjenja, Adresa, ID_koordinatora, ID_glasackog_mesta, Primedba)
+VALUES (6, 'Ljubica', 'Ivan', 'Zarkovic', '31.3.1972', 'Kovanlucka 7', 1, 2, 'Kupovina glasova');
+
+
+INSERT INTO Reklamni_prostor(ID_reklamnog_prostora, Iznos, Datum_od, Datum_do)
+VALUES (4, 170000, '1.1.2018', '1.3.2018');
+
+INSERT INTO Reklamni_prostor(ID_reklamnog_prostora, Iznos, Datum_od, Datum_do)
+VALUES (5, 123333, '1.12.2017', '1.4.2018');
+
+INSERT INTO Reklamni_prostor(ID_reklamnog_prostora, Iznos, Datum_od, Datum_do)
+VALUES (6, 1700, '1.3.2018', '2.3.2018');
+
+INSERT INTO Panoi(ID_reklamnog_prostora, Naziv_ulice, Grad_pano, Povrsina, Agencija_vlasnik)
+VALUES (4, 'Episkopska 15', 'Nis', 27, 'Panoi Lux');
+
+INSERT INTO Clanak(ID_reklamnog_prostora, Boja, Naziv_lista)
+VALUES (5, 'Crno-beli','Politika');
+
+INSERT INTO Reklama(ID_reklamnog_prostora, Trajanje, Br_emitovanja, Naziv_televizije)
+VALUES (6, 7, 125, 'Happy');
+
+INSERT INTO Deljenje_letaka(ID_akcije, Grad_deljenje)
+VALUES (4, 'Nis');
+
+INSERT INTO Susreti(ID_akcije, Grad_susret, Vreme_trajanja, Lokacija_susreta)
+VALUES (5, 'Leskovac', 2, 'Hala Zdravlje');
+
+INSERT INTO Gost(Ime_gosta, Prezime_gosta, Funkcija, ID_gosta)
+VALUES ('Pejca', 'Lovac', 'Gospodin', 2);
+
+INSERT INTO Miting(ID_akcije, Lokacija_mitinga, Mesto, ID_Gosta3)
+VALUES (6, 'Nis', 'Pasi Poljana', 2);
+
+INSERT INTO Zatvoreni_prostor(ID_zatvorenog_prostora, Vlasnik_prostora, Cena_iznajmljivanja,ID_akcije3)
+VALUES (1, 'Pera Zikic', 155555, 6);
+
+--------
+
+INSERT INTO Pojavljivanje(ID_pojavljivanja)
+VALUES (4);
+
+INSERT INTO Pojavljivanje(ID_pojavljivanja)
+VALUES (5);
+
+INSERT INTO Pojavljivanje(ID_pojavljivanja)
+VALUES (6);
+
+INSERT INTO Intervju(ID_pojavljivanja, Datum_intervjua, Datum_objavljivanja, Naziv_lista)
+VALUES(4, '11.4.2018', '13.4.2018', 'NIN');
+
+INSERT INTO Gostovanje(ID_pojavljivanja, Gledanost, Naziv_emisije, Ime_voditelja)
+VALUES (5, 150000, 'Duel', 'Olivera');
+
+INSERT INTO TV_duel(ID_tv_duela, Naziv_stanice,ID_pojavljivanja2)
+VALUES (1, "RTS", 5);
+
+INSERT INTO Ucestvuje(ID_aktiviste0, ID_akcije1)
+VALUES (1, 1);
+
+INSERT INTO Ucestvuje(ID_aktiviste0, ID_akcije1)
+VALUES (1, 2);
+
+INSERT INTO Ucestvuje(ID_aktiviste0, ID_akcije1)
+VALUES (1, 3);
+
+INSERT INTO Ucestvuje(ID_aktiviste0, ID_akcije1)
+VALUES (2, 3);
+
+INSERT INTO Intervju(ID_pojavljivanja, Datum_intervjua, Datum_objavljivanja, Naziv_lista)
+VALUES(3, '12.4.2018', '14.4.2018', 'Politika');
+
+INSERT INTO Gostovanje(ID_pojavljivanja, Gledanost, Naziv_emisije, Ime_voditelja)
+VALUES (6, 1502000, 'OKO', 'Nadezda');
+
+INSERT INTO TV_duel(ID_tv_duela, Naziv_stanice,ID_pojavljivanja2)
+VALUES (2, 'RTS', 6);
+
+INSERT INTO Ime_protivkandidata(ID_pojavljivanja, Ime_protivkandidata)
+VALUES (1, 'Pera Peric');
+
+INSERT INTO Ime_protivkandidata(ID_pojavljivanja, Ime_protivkandidata)
+VALUES (2, 'Mirko Mikic');
+

@@ -1,0 +1,55 @@
+C:\Users\Mirjana\AppData\Local\Temporary Projects\SBP\bin\Debug\SBP.exe.config
+E:\1\SBP\SBP\SBP\bin\Debug\SBP.exe.config
+E:\1\SBP\SBP\SBP\obj\Debug\SBP.csprojResolveAssemblyReference.cache
+E:\1\SBP\SBP\SBP\obj\Debug\SBP.Nova.resources
+E:\1\SBP\SBP\SBP\obj\Debug\SBP.Properties.Resources.resources
+E:\1\SBP\SBP\SBP\obj\Debug\SBP.csproj.GenerateResource.Cache
+E:\1\SBP\SBP\SBP\bin\Debug\SBP.exe
+E:\1\SBP\SBP\SBP\bin\Debug\SBP.pdb
+E:\1\SBP\SBP\SBP\bin\Debug\FluentNHibernate.dll
+E:\1\SBP\SBP\SBP\bin\Debug\Iesi.Collections.dll
+E:\1\SBP\SBP\SBP\bin\Debug\NHibernate.dll
+E:\1\SBP\SBP\SBP\bin\Debug\FluentNHibernate.pdb
+E:\1\SBP\SBP\SBP\bin\Debug\FluentNHibernate.xml
+E:\1\SBP\SBP\SBP\bin\Debug\Iesi.Collections.xml
+E:\1\SBP\SBP\SBP\bin\Debug\NHibernate.xml
+E:\1\SBP\SBP\SBP\obj\Debug\SBP.exe
+E:\1\SBP\SBP\SBP\obj\Debug\SBP.pdb
+E:\1\SBP\SBP\SBP\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\VI semestar\SBP\SBP\SBP\bin\Debug\SBP.exe.config
+D:\VI semestar\SBP\SBP\SBP\obj\Debug\SBP.exe
+D:\VI semestar\SBP\SBP\SBP\obj\Debug\SBP.pdb
+D:\VI semestar\SBP\SBP\SBP\bin\Debug\SBP.exe
+D:\VI semestar\SBP\SBP\SBP\bin\Debug\SBP.pdb
+D:\VI semestar\SBP\SBP\SBP\bin\Debug\FluentNHibernate.dll
+D:\VI semestar\SBP\SBP\SBP\bin\Debug\Iesi.Collections.dll
+D:\VI semestar\SBP\SBP\SBP\bin\Debug\NHibernate.dll
+D:\VI semestar\SBP\SBP\SBP\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\VI semestar\SBP\SBP\SBP\bin\Debug\FluentNHibernate.pdb
+D:\VI semestar\SBP\SBP\SBP\bin\Debug\FluentNHibernate.xml
+D:\VI semestar\SBP\SBP\SBP\bin\Debug\Iesi.Collections.xml
+D:\VI semestar\SBP\SBP\SBP\bin\Debug\NHibernate.xml
+D:\VI semestar\SBP\SBP\SBP\obj\Debug\SBP.csprojResolveAssemblyReference.cache
+D:\VI semestar\SBP\SBP\SBP\obj\Debug\SBP.Nova.resources
+D:\VI semestar\SBP\SBP\SBP\obj\Debug\SBP.Properties.Resources.resources
+D:\VI semestar\SBP\SBP\SBP\obj\Debug\SBP.csproj.GenerateResource.Cache
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\bin\Debug\SBP.exe.config
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\obj\Debug\SBP.exe
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\obj\Debug\SBP.pdb
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\bin\Debug\SBP.exe
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\bin\Debug\SBP.pdb
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\bin\Debug\FluentNHibernate.dll
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\bin\Debug\Iesi.Collections.dll
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\bin\Debug\NHibernate.dll
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\bin\Debug\Oracle.ManagedDataAccess.dll
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\bin\Debug\FluentNHibernate.pdb
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\bin\Debug\FluentNHibernate.xml
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\bin\Debug\Iesi.Collections.xml
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\bin\Debug\NHibernate.xml
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\obj\Debug\SBP.csprojResolveAssemblyReference.cache
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\obj\Debug\SBP.Nova.resources
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\obj\Debug\SBP.Properties.Resources.resources
+E:\Elfak\III\Sistemi baza podataka\SBP\SBP\obj\Debug\SBP.csproj.GenerateResource.Cache
+E:\Fakultet\III godina\Sistemi Baza Podataka\Projekat Izbori 2k18\SBP\SBP\bin\Debug\SBP.exe.config
+E:\Fakultet\III godina\Sistemi Baza Podataka\Projekat Izbori 2k18\SBP\SBP\obj\Debug\SBP.exe
+E:\Fakultet\III godina\Sistemi Baza Podataka\Projekat Izbori 2k18\SBP\SBP\obj\Debug\SBP.pdb
